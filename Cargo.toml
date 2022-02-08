@@ -12,9 +12,16 @@ categories = ["data-structures", "no-std"]
 edition = "2018"
 
 [dependencies]
-cty = { git="https://github.com/mutantbob/cty.git" }
-#memchr = { version = "2.3.3", default-features = false }
-memchr = { git = "https://github.com/BurntSushi/memchr.git", tag="2.4.1", default-features = false }
+
+[dependencies.memchr]
+default-features = false
+# version="*"
+git = "https://github.com/BurntSushi/memchr.git"
+tag="2.4.1"
+
+[dependencies.cty]
+git="https://github.com/mutantbob/cty.git"
+branch="2022-Feb-avr"
 
 [features]
 default = ["arc", "alloc"]
